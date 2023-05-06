@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Table(name = "todo")
 @Getter
 @Setter
-public class Todo {
+public class TodoEntity {
     @Id
     @Column(name = "todo_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,11 +28,11 @@ public class Todo {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "todofolder_id")
-    private TodoFolder todoFolder;
+    private TodoFolderEntity todoFolderEntity;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member")
-    private Member member;
+    @JoinColumn(name = "member_id")
+    private MemberEntity memberEntity;
 
     private LocalDateTime creationDate; //생성일
 

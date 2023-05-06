@@ -4,13 +4,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "todofolder")
 @Getter
 @Setter
-public class TodoFolder {
+public class TodoFolderEntity {
     @Id
     @Column(name = "todofolder_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,6 +21,6 @@ public class TodoFolder {
     private String color; //폴더 색상
 
     //있어야하는지 다시 생각해볼것.
-    @OneToMany(mappedBy = "todoFolder" , cascade = CascadeType.ALL)
-    private List<Todo> todos;
+    @OneToMany(mappedBy = "todoFolderEntity" , cascade = CascadeType.ALL)
+    private List<TodoEntity> todoEntities = new ArrayList<>();
 }
