@@ -15,6 +15,8 @@ public class Todo {
     @Column(name = "todo_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @Column(nullable = false)
     private String title; //제목
 
     @Lob

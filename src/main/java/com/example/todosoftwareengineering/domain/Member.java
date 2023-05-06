@@ -15,7 +15,9 @@ public class Member {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name; //이름
-    @Column(unique = true)
+    @Column(unique = true,nullable = false)
     private String email; //이메일 (ID)
+
+    @Column(nullable = false)
     private String password; //비밀번호
 }
