@@ -1,6 +1,6 @@
 package com.example.todosoftwareengineering.mapper.todo;
 
-import com.example.todosoftwareengineering.domain.Todo;
+import com.example.todosoftwareengineering.domain.TodoEntity;
 import com.example.todosoftwareengineering.dto.TodoDto;
 import com.example.todosoftwareengineering.mapper.GenericMapper;
 import org.mapstruct.Mapper;
@@ -10,7 +10,7 @@ import org.mapstruct.Mapper;
  * componentModel = "spring" : spring에 맞게 bean으로 등록해준다
  */
 @Mapper(componentModel = "spring")
-public interface TodoResponseMapper extends GenericMapper<TodoDto.TodoResponseDto, Todo> {
+public interface TodoResponseMapper extends GenericMapper<TodoDto.TodoResponseDto, TodoEntity> {
 
 
 }

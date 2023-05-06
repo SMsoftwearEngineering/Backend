@@ -1,9 +1,6 @@
 package com.example.todosoftwareengineering.dto;
 
-import com.example.todosoftwareengineering.domain.Member;
 import lombok.*;
-
-import javax.persistence.Column;
 
 public class TodoFolderDto {
     @Getter

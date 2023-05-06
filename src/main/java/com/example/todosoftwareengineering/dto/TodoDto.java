@@ -1,6 +1,6 @@
 package com.example.todosoftwareengineering.dto;
 
-import com.example.todosoftwareengineering.domain.Member;
+import com.example.todosoftwareengineering.domain.MemberEntity;
 import lombok.*;
 
 public class TodoDto {
@@ -15,7 +15,7 @@ public class TodoDto {
         private String content; //내용
         private int priority; //우선순위
         private String todoFolderName; //todofolder 이름 //나중에 TodoFolderDto로 변경해야함.
-        private Member member;
+        private MemberEntity memberEntity;
     }
 
     @Getter
