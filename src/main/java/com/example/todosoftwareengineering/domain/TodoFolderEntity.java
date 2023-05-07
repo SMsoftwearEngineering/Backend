@@ -1,5 +1,6 @@
 package com.example.todosoftwareengineering.domain;
 
+import com.example.todosoftwareengineering.dto.TodoFolderDto;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,4 +24,9 @@ public class TodoFolderEntity {
     //있어야하는지 다시 생각해볼것.
     @OneToMany(mappedBy = "todoFolderEntity" , cascade = CascadeType.ALL)
     private List<TodoEntity> todoEntities = new ArrayList<>();
+
+    public void update(TodoFolderDto.TodoFolderPatchDto todoFolderPatchDto) {
+        this.title = todoFolderPatchDto.getTitle();
+        this.color = todoFolderPatchDto.getColor();
+    }
 }

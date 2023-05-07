@@ -1,5 +1,6 @@
 package com.example.todosoftwareengineering.domain;
 
+import com.example.todosoftwareengineering.dto.TodoDto;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -38,4 +39,13 @@ public class TodoEntity {
 
     private LocalDateTime completeDate; //종료일
     private LocalDateTime wishCompleteDate; //마감일
+
+
+    public void update(TodoDto.TodoPatchDto todoPatchDto,TodoFolderEntity todoFolderEntity) {
+        this.title = todoPatchDto.getTitle();
+        this.content = todoPatchDto.getContent();
+        this.execution = todoPatchDto.isExecution();
+        this.priority = todoPatchDto.getPriority();
+        this.todoFolderEntity = todoFolderEntity;
+    }
 }
