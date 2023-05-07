@@ -4,4 +4,5 @@ import com.example.todosoftwareengineering.domain.TodoFolderEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TodoFolderRepository extends JpaRepository<TodoFolderEntity,Long> {
+    TodoFolderEntity findByTitle(String title);
 }
